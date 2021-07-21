@@ -9,7 +9,7 @@ else
         array.push(gets.chomp)
     end
 
-    hash = {}
+    hash = Hash.new
     array.each {|num| hash.key?(num) ? hash[num] += 1 : hash[num] = 1}
     p hash.sort_by {|key, value| value}.to_h
 end
